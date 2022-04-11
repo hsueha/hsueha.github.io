@@ -10,4 +10,4 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "50px";
 }
 
-$(function(){ $("head").load("header.html") });
+$(function(){ $("#head").load("header.html") });
