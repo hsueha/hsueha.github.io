@@ -1,129 +1,131 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Alexandra Hsueh's Homepage</title>
-		<link href="index.css" rel="stylesheet"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-        body {
-          font-family: "Lato", sans-serif;
-        }
-
-        .sidebar {
-          height: 100%;
-          width: 150px;
-          position: fixed;
-          z-index: 1;
-          top: 0;
-          left: 0;
-          background-color: #3A1492;
-          overflow-x: hidden;
-          transition: 0.5s;
-          padding-top: 60px;
-        }
-
-        .sidebar a {
-          padding: 8px 8px 8px 32px;
-          text-decoration: none;
-          font-size: 20px;
-          color: #818181;
-          display: block;
-          transition: 0.3s;
-        }
-
-        .sidebar a:hover {
-          color: #f1f1f1;
-        }
-        
-        .sidebar .navbtn:hover {
-          color: #f1f1f1;
-          background-color: #111;
-          font-size: 25px;
-        }
-
-        .sidebar .closebtn {
-          position: absolute;
-          top: 0;
-          right: 25px;
-          font-size: 36px;
-          margin-left: 50px;
-        }
-
-        .openbtn {
-          font-size: 20px;
-          cursor: pointer;
-          background-color: #3A1492;
-          color: white;
-          padding: 10px 15px;
-          border: none;
-          float:left;
-        }
-
-        .openbtn:hover {
-          background-color: #444;
-        }
-        
-        .pageTitle {
-        	margin-top:2%;
-        	margin-left: 75px;
-        }
-
-        #main {
-          margin-left: 150px;
-          transition: margin-left .5s;
-          padding: 16px;
-        }
-
-        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-        @media screen and (max-height: 450px) {
-          .sidebar {padding-top: 15px;}
-          .sidebar a {font-size: 18px;}
-        }
-        </style>
-	</head>
-	<body>
-    	<div id="mySidebar" class="sidebar">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#xab;</a>
-          <a href="/" class="navbtn">Home</a>
-          <a href="/contact" class="navbtn">Contact</a>
-          <a href="/about" class="navbtn">About</a>
-        </div>
-        <div id="main">
-          <button class="openbtn" onclick="openNav()">☰</button>
-          <h2 class="pageTitle">Alexandra Hsueh</h2>
-		<div class="pageBody">
-        <div class="profilePic">
-          <img src="img/AlexandraHsueh.jpg" alt="Alexandra Hsueh">
-          <figcaption>Alexandra Hsueh</figcaption>
-        </div>
-		<h2>
-			Achievements
-		</h2>
-		<p></p>
-		<p></p>
-		<p></p>
-		<div>			
-			<h2 id="contact">Contact me</h2>
-			<ul>
-				<li>
-					Email: <a href="mailto:alexandrahsueh@gmail.com">Alexandra Hsueh</a>
-				</li>
-				<li>
-					Find me here on Github: <a href="https://github.com/hsueha">https://github.com/hsueha</a>
-				</li>
-			</ul>
-		</div>
-        </div>
-	</body>
-    <script>
-      function openNav() {
-        document.getElementById("mySidebar").style.width = "150px";
-        document.getElementById("main").style.marginLeft = "150px";
+  <head>
+    <title>Alexandra Hsueh's Homepage</title>
+    <link href="index.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+      font-family: "Lato", sans-serif;
       }
-
-      function closeNav() {
-        document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
+      .sidebar {
+      height: 100%;
+      width: 150px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #3A1492;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
       }
-      </script>
+      .sidebar a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+      }
+      .sidebar a:hover {
+      color: #f1f1f1;
+      }
+      .sidebar .navbtn:hover {
+      color: #f1f1f1;
+      background-color: #111;
+      font-size: 25px;
+      }
+      .sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      }
+      #myClosedSidebar {
+      height: 100%;
+      width: 0px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      background-color: #3A1492;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      }
+      #myClosedSidebar .openbtn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 20px;
+      color: #818181;
+      border: none;
+      }
+      #myClosedSidebar .openbtn:hover {
+      color: #f1f1f1;
+      cursor: pointer;
+      }
+      #main {
+      top: 10px;
+      margin-left: 150px;
+      transition: margin-left .5s;
+      padding: 16px;
+      }
+      /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+      @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#xab;</a>
+      <a href="/" class="navbtn">Home</a>
+      <a href="/contact" class="navbtn">Contact</a>
+      <a href="/about" class="navbtn">About</a>
+    </div>
+    <div id="myClosedSidebar" class="sidebar">
+      <a href="javascript:void(0)" class="openbtn" onclick="openNav()">☰</a>
+    </div>
+    <div id="main">
+    <h2>Alexandra Hsueh</h2>
+    <div class="pageBody">
+      <div class="profilePic">
+        <img src="img/AlexandraHsueh.jpg" alt="Alexandra Hsueh">
+        <figcaption>Alexandra Hsueh</figcaption>
+      </div>
+      <h2>
+        Achievements
+      </h2>
+      <p></p>
+      <p></p>
+      <p></p>
+      <div>
+        <h2 id="contact">Contact me</h2>
+        <ul>
+          <li>
+            Email: <a href="mailto:alexandrahsueh@gmail.com">Alexandra Hsueh</a>
+          </li>
+          <li>
+            Find me here on Github: <a href="https://github.com/hsueha">https://github.com/hsueha</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "150px";
+      document.getElementById("myClosedSidebar").style.width = "0px";
+      document.getElementById("main").style.marginLeft = "150px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("myClosedSidebar").style.width = "50px";
+      document.getElementById("main").style.marginLeft= "50px";
+    }
+  </script>
 </html>
