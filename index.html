@@ -3,33 +3,106 @@
 	<head>
 		<title>Alexandra Hsueh's Homepage</title>
 		<link href="index.css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body {
+          font-family: "Lato", sans-serif;
+        }
+
+        .sidebar {
+          height: 100%;
+          width: 150px;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #3A1492;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+        }
+
+        .sidebar a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 20px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+          color: #f1f1f1;
+        }
+        
+        .sidebar .navbtn:hover {
+          color: #f1f1f1;
+          background-color: #111;
+          font-size: 25px;
+        }
+
+        .sidebar .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
+
+        .openbtn {
+          font-size: 20px;
+          cursor: pointer;
+          background-color: #3A1492;
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          float:left;
+        }
+
+        .openbtn:hover {
+          background-color: #444;
+        }
+        
+        .pageTitle {
+        	margin-top:2%;
+        	margin-left: 75px;
+        }
+
+        #main {
+          margin-left: 150px;
+          transition: margin-left .5s;
+          padding: 16px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+          .sidebar {padding-top: 15px;}
+          .sidebar a {font-size: 18px;}
+        }
+        </style>
 	</head>
-	<style>
-		ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		}
-	</style>
 	<body>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/contact">Contact</a></li>
-			<li><a href="/about">About</a></li>
-		</ul>
+    	<div id="mySidebar" class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#xab;</a>
+          <a href="/" class="navbtn">Home</a>
+          <a href="/contact" class="navbtn">Contact</a>
+          <a href="/about" class="navbtn">About</a>
+        </div>
+        <div id="main">
+          <button class="openbtn" onclick="openNav()">☰</button>
+          <h2 class="pageTitle">Alexandra Hsueh</h2>
 		<div class="pageBody">
-		<h1 class="pageTitle">About Me</h1>
+        <div class="profilePic">
+          <img src="img/AlexandraHsueh.jpg" alt="Alexandra Hsueh">
+          <figcaption>Alexandra Hsueh</figcaption>
+        </div>
 		<h2>
 			Achievements
 		</h2>
 		<p></p>
 		<p></p>
 		<p></p>
-		<div>
-			<div class="teamMember">
-				<img class="teamPhoto" src="img/teamPhotos/AlexandraHsueh.jpg" alt="Alexandra Hsueh">
-				<figcaption>Alexandra Hsueh</figcaption>
-			</div>
+		<div>			
 			<h2 id="contact">Contact me</h2>
 			<ul>
 				<li>
@@ -40,5 +113,17 @@
 				</li>
 			</ul>
 		</div>
+        </div>
 	</body>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "150px";
+        document.getElementById("main").style.marginLeft = "150px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+      </script>
 </html>
