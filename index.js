@@ -9,3 +9,5 @@ function closeNav() {
   document.getElementById("myClosedSidebar").style.width = "50px";
   document.getElementById("main").style.marginLeft= "50px";
 }
+
+$(function(){ $("head").load("header.html") });
