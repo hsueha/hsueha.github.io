@@ -70,3 +70,13 @@ padding: 16px;
 .sidebar {padding-top: 15px;}
 .sidebar a {font-size: 18px;}
 }
+.profilePic img {
+    width:250px;
+}
+.pageLeft {
+    float:left;
+}
+.pageRight {
+    width: 60%;
+    margin-left: 10px;
+}
