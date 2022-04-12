@@ -71,12 +71,14 @@ padding: 16px;
 .sidebar a {font-size: 18px;}
 }
 .profilePic img {
-    width:250px;
+    width:100%;
 }
 .pageLeft {
+    width:35%;
     float:left;
+    text-align: center
 }
 .pageRight {
-    width: 60%;
-    margin-left: 10px;
+    width: 65%;
+    margin-left: 40%;
 }
